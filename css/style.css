@@ -1,4 +1,7 @@
 /* CÓDIGOS GERAIS */
+html {
+  scroll-behavior: smooth;
+}
 
 .bg-top {
   background: transparent;
@@ -386,9 +389,12 @@ label {
   color: #fff;
 }
 
-.social-link {
-  padding: 10px;
-  font-size: 2rem;
+.social-item {
+  background: transparent;
+}
+
+.social-item:hover {
+  background: transparent;
 }
 
 .social-link:hover {
@@ -427,8 +433,37 @@ label {
     background: #38b000 !important;
   }
 
+  .navbar-brand {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+
+  .mostrar {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s ease;
+  }
+
   .nav-top {
     padding: 0 30px;
+  }
+
+  .nav-item {
+    margin-right: 10px;
+    background: none;
+    border-radius: 10px;
+    padding: 0px 5px;
+    transition: 0.5s ease;
+  }
+
+  .nav-item:hover {
+    background: none;
+    transform: scale(0.9);
+  }
+
+  .nav-link {
+    color: #fff !important;
   }
 
   .header {

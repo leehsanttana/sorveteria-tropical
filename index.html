@@ -14,14 +14,14 @@
 <body id="home">
     <nav class="navbar navbar-expand-md bg-top nav-top fixed-top" id="bg-nav">
 
-        <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+        <a class="navbar-brand" href="#" id="img-nav"><img src="img/logo.png" alt="Sorvereria Tropical" class=""></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span><i class="fas fa-bars text-white"></i></span>
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav bg-change-nav">
                 <li class="nav-item">
                     <a class="nav-link menu-ativo" href="#home">Home</a>
                 </li>
@@ -125,7 +125,6 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-
                         <div class="content">
                             <h3>Picolés</h3>
                             <div class="content-produto mt-4">
@@ -134,14 +133,11 @@
                                     <button type="button" class="btn btn-green" data-toggle="modal" data-target="#picoles">
                                         Veja Mais
                                     </button>
-
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="swiper-slide">
-
                         <div class="content">
                             <h3>Potes de Sorvete</h3>
                             <div class="content-produto mt-4">
@@ -153,10 +149,8 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="swiper-slide">
-
                         <div class="content">
                             <h3>Açai</h3>
                             <div class="content-produto mt-4">
@@ -165,14 +159,11 @@
                                     <button type="button" class="btn btn-green" data-toggle="modal" data-target="#acai">
                                         Veja Mais
                                     </button>
-
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="swiper-slide">
-
                         <div class="content">
                             <h3>Picolés</h3>
                             <div class="content-produto mt-4">
@@ -181,14 +172,11 @@
                                     <button type="button" class="btn btn-green" data-toggle="modal" data-target="#picoles">
                                         Veja Mais
                                     </button>
-
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="swiper-slide">
-
                         <div class="content">
                             <h3>Potes de Sorvete</h3>
                             <div class="content-produto mt-4">
@@ -200,10 +188,8 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="swiper-slide">
-
                         <div class="content">
                             <h3>Açai</h3>
                             <div class="content-produto mt-4">
@@ -212,7 +198,6 @@
                                     <button type="button" class="btn btn-green" data-toggle="modal" data-target="#acai">
                                         Veja Mais
                                     </button>
-
                                 </div>
                             </div>
                         </div>
@@ -333,11 +318,15 @@
             <div class="col-md-3">
                 <h5>Redes Sociais</h5>
                 <ul class="nav">
-                    <li class="nav-item">
-                        <a href="" class="social-link"><i class="fab fa-facebook-f"></i></i></a>
+                    <li class="nav-item social-item">
+                        <a href="" class="social-link">
+                            <img src="img/facebook.png" alt="">
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <li class="nav-item social-item">
+                        <a href="" class="social-link">
+                            <img src="img/instagram.png" alt="">
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -528,51 +517,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <!-- Plugin Jquery-->
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script>
-
-        (function () {
-            var menu = document.getElementById('bg-nav'); // colocar em cache
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > 0) menu.classList.add('bg-change-nav'); // > 0 ou outro valor desejado
-                else menu.classList.remove('bg-change-nav');
-            });
-        })();
-
-        // Disable form submissions if there are invalid fields
-        (function () {
-            'use strict';
-            window.addEventListener('load', function () {
-                // Get the forms we want to add validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
-
-    </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
