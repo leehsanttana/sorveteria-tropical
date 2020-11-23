@@ -403,6 +403,7 @@ label {
   right: 10px;
   bottom: 10px;
   z-index: 10;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
 }
 
 .whatsapp img {
@@ -411,6 +412,17 @@ label {
 
 .whatsapp img:hover {
   transform: scale(0.9);
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -453,6 +465,7 @@ label {
   }
 
   .header {
+    background: #f1f1f1 no-repeat;
     padding: 80px 30px 0 30px;
     height: auto;
   }

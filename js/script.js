@@ -5,7 +5,7 @@ $('.navbar-nav a[href^="#"]').on('click', function(e) {
 			
 	$('html, body').animate({ 
 		scrollTop: targetOffset - 60
-	}, 500);
+	}, 0);
 });
 
 $('a[href^="#"]').on('click', function(e) {
