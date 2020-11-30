@@ -123,7 +123,7 @@ h4::after {
 /* SESSÃO HEADER */
 
 .header {
-  background: #f1f1f1 url(../img/wave-top.svg) no-repeat top;
+  background: url(../img/wave.svg) no-repeat #f1f1f1;
   width: 100%;
   height: auto;
   padding: 110px 80px;
@@ -375,11 +375,12 @@ label {
 }
 
 /* SESSÃO FOOTER */
+
 .footer {
-  background: url(../img/wave-footer.svg) no-repeat top #ff8500;
+  background: url(../img/wave-footer.svg) no-repeat #ff8500;
   width: 100%;
   padding: 150px 80px 20px 80px;
-  height: 400px;
+  height: 430px;
 }
 
 .footer .row {
