@@ -431,7 +431,7 @@ label {
 
 @media (max-width: 768px) {
   .bg-top {
-    background: #38b000;
+    background: #ff8500;
     transition: 0.5s ease;
   }
 
@@ -529,7 +529,7 @@ label {
   }
 
   .footer {
-    background: url(../img/wave-footer.svg) no-repeat top #288000;
+    background: url(../img/wave-footer.svg) no-repeat top #ff8500;
     width: 100%;
     padding: 100px 80px 20px 80px;
     height: auto;
