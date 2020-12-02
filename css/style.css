@@ -4,8 +4,8 @@ html {
 }
 
 @font-face {
-  font-family: Swis721 Blk BT;
-  src: local(Swis721 Blk BT), url(../font/swiss-721-black-bt.ttf);
+  font-family: swiss-721-black-bt;
+  src: local(swiss-721-black-bt), url(../font/swiss-721-black-bt.ttf);
 }
 
 .bg-top {
@@ -37,8 +37,9 @@ h4,
 h5,
 h6,
 a {
-  font-family: "Swis721 Blk BT", sans-serif;
+  font-family: "swiss-721-black-bt", sans-serif;
   color: #fff;
+  font-weight: 900;
 }
 
 h2::after,
@@ -441,7 +442,7 @@ label {
   }
 
   .group-btn .btn-outline-yellow {
-    margin-left: 1rem !important;
+    margin-left: 0;
   }
 
   .main-carousel {
@@ -531,12 +532,15 @@ label {
     margin-top: 20px;
   }
 
-  .group-btn a {
-    margin-bottom: 2rem;
-    font-size: 0.9rem;
+  .group-btn {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    align-items: center;
   }
 
   .main-carousel {
+    margin-top: 1rem;
     position: relative;
     top: 0;
   }
