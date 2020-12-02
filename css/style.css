@@ -3,6 +3,11 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: Swis721 Blk BT;
+  src: local(Swis721 Blk BT), url(../font/swiss-721-black-bt.ttf);
+}
+
 .bg-top {
   background: transparent;
   transition: 0.5s ease;
@@ -527,11 +532,8 @@ label {
   }
 
   .group-btn a {
-    margin-bottom: 1rem;
-  }
-
-  .group-btn .btn-outline-yellow {
-    margin-left: 0;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
   }
 
   .main-carousel {
