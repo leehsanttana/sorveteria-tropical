@@ -13,6 +13,18 @@ html {
   transition: 0.5s ease;
 }
 
+.navbar-brand {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.mostrar {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
 h1,
 h2,
 h3,
@@ -196,12 +208,13 @@ h4::after {
   background: #ff8500;
 }
 
-.produtos h2 {
+.produtos h2,
+.produtos h3,
+.produtos p {
   color: #fff;
 }
 
 .content h3 {
-  color: #fff;
   text-align: center;
 }
 
@@ -240,10 +253,10 @@ h4::after {
 
 .inner-content button {
   position: relative;
-  top: 50%;
   left: 50%;
+  top: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -20%);
   transition: 0.5s ease;
 }
 
@@ -254,31 +267,6 @@ h4::after {
 .content-produto:hover .inner-content {
   opacity: 1;
   background-color: #ffc400c0;
-}
-
-.content-produto:hover .inner-content button {
-  -webkit-animation: slide-top 0.5s ease both alternate;
-  animation: slide-top 0.5s ease both alternate;
-}
-
-@-webkit-keyframes slide-top {
-  0% {
-    margin-top: 100px;
-  }
-  100% {
-    margin-top: 0px;
-  }
-}
-@keyframes slide-top {
-  0% {
-    margin-top: 100px;
-  }
-  100% {
-    margin-top: 0px;
-  }
-  0% {
-    margin-top: 100px;
-  }
 }
 
 /* SESSÃO MODAL PRODUTOS */
@@ -312,12 +300,10 @@ p {
   color: #38b000;
 }
 
-.carousel-control-prev-icon {
-  background-image: none !important;
-}
-
+.carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-image: none !important;
+  color: #288000;
 }
 
 /* SESSÃO CONTATOS */
@@ -364,14 +350,17 @@ label {
   font-size: 1.1rem;
 }
 
+.endereco {
+  display: grid;
+  grid-template-columns: 300px 10px;
+  grid-gap: 10px;
+}
+
 .separador {
   height: 260px;
   width: 0;
   border-right: 2px solid #000;
   border-bottom: none;
-  margin-right: 12px;
-  display: block;
-  margin: 25px 10px 5px 10px;
 }
 
 /* SESSÃO FOOTER */
@@ -430,22 +419,80 @@ label {
   }
 }
 
+@media (max-width: 992px) {
+  .title-header {
+    max-width: 100%;
+  }
+
+  .title-header h1,
+  .title-header h2 {
+    text-align: center;
+  }
+
+  .group-btn {
+    margin-top: 2rem !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .group-btn .btn-outline-yellow {
+    margin-left: 1rem !important;
+  }
+
+  .main-carousel {
+    position: relative;
+    top: 0;
+  }
+
+  .sobre {
+    height: 1300px;
+  }
+
+  .info-sobre {
+    max-width: 100%;
+  }
+
+  .produtos {
+    padding: 60px 30px 110px;
+  }
+
+  .contatos {
+    padding: 100px 30px 110px;
+  }
+
+  .contatos p {
+    line-height: 18px;
+  }
+
+  .endereco {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .separador {
+    width: 260px;
+    height: 0;
+    border-right: none;
+    border-bottom: 2px solid #000;
+  }
+
+  .footer {
+    background: url(../img/wave-footer.svg) no-repeat top #ff8500;
+    width: 100%;
+    padding: 140px 80px 20px 80px;
+    height: auto;
+  }
+
+  .footer .row {
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .bg-top {
     background: #ff8500;
     transition: 0.5s ease;
-  }
-
-  .navbar-brand {
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s ease;
-  }
-
-  .mostrar {
-    visibility: visible;
-    opacity: 1;
-    transition: 0.3s ease;
   }
 
   .nav-top {
@@ -493,7 +540,7 @@ label {
   }
 
   .sobre {
-    padding: 30px 30px 110px;
+    padding: 30px 50px 110px 30px;
     height: auto;
   }
 
@@ -503,6 +550,7 @@ label {
 
   .produtos {
     padding: 30px 30px 110px;
+    height: auto;
   }
 
   .content-produto {
@@ -525,18 +573,9 @@ label {
     height: 0;
     border-right: none;
     border-bottom: 2px solid #000;
-    display: block;
-    margin: 10px 25px 10px 5px;
   }
 
   .footer {
-    background: url(../img/wave-footer.svg) no-repeat top #ff8500;
-    width: 100%;
-    padding: 100px 80px 20px 80px;
-    height: auto;
-  }
-
-  .footer .row {
-    margin-top: 0;
+    padding: 100px 30px 20px;
   }
 }

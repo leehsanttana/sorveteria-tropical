@@ -8,7 +8,7 @@ $('.navbar-nav a[href^="#"]').on('click', function(e) {
 	}, 0);
 });
 
-$('a[href^="#"]').on('click', function(e) {
+$('.btn-group a[href^="#"]').on('click', function(e) {
 	e.preventDefault();
 	var id = $(this).attr('href'),
 			targetOffset = $(id).offset().top;
@@ -49,22 +49,23 @@ $('.navbar-nav>li>a').on('click', function(){
     },
 
     breakpoints: {
-        // when window width is >= 320px
-        320: {
+        375: {
           slidesPerView: 1,
           spaceBetween: 20
         },
-        // when window width is >= 480px
-        480: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        768: {
           slidesPerView: 2,
           spaceBetween: 30
         },
-        // when window width is >= 640px
-        640: {
+        992: {
           slidesPerView: 2,
           spaceBetween: 40
         },
-        768: {
+        1400: {
         slidesPerView: 3,
           spaceBetween: 40
         },
